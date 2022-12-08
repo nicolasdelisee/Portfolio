@@ -1,0 +1,29 @@
+@font-face {
+  font-family: Play;
+  src: url("./assets/fonts/Play-Regular.ttf");
+}
+
+@font-face {
+  font-family: Flower;
+  src: url("./assets/fonts/Flower.ttf");
+}
+
+:root {
+  --burgermenu-color: #202329f8;
+  --secondary-color: #61dafb;
+  --primary-font: Play;
+  --secondary-font: Flower;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+  background-color: #282c34;
+  color: var(--secondary-color);
+  font-family: var(--primary-font);
+}
+
+

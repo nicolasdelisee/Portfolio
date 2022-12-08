@@ -1,0 +1,58 @@
+  .navbar button {
+    position: fixed;
+    right: 0;
+    z-index: 10;
+    cursor: pointer;
+  }
+  
+  .menuNav {
+    overflow-y: scroll;
+    list-style: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 35vh;
+    width: 0;
+    overflow: hidden;
+    z-index: 9;
+  }
+  
+  .menuNav.showMenu {
+    width: 100vw;
+    background-color: var(--burgermenu-color);
+  }
+  
+  .menuNav li {
+    margin-top: 3vh;
+    padding-bottom: 3vh;
+    border-bottom: 1px solid;
+    text-align: center;
+  }
+
+.navbar li {
+    padding-right: 5vmin;
+    text-decoration: none;
+    background-color: var(--burgermenu-color);
+}
+
+.active-burger {
+    display: none;
+}
+
+.navbar button {
+    border: none;
+    background-color: var(--burgermenu-color);
+}
+
+.navbarOpen {
+    width: 12vw;
+    height: 12vw;
+    position:relative;
+    background-color: var(--burgermenu-color);
+}
+
+.navbarClose {
+    width: 12vw;
+    height: 12vw;
+}
