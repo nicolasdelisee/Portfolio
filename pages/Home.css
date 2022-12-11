@@ -73,23 +73,24 @@
     font-size: 1rem;
     border-radius: 10px;
     border: none;
-    cursor: pointer;
-    
+    cursor: pointer; 
 }
 
-.button-homepage-anime {
+.button-homepage-anime1 {
+    -webkit-animation: shadow-drop-2-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: shadow-drop-2-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.button-homepage-anime2 {
     -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
     animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	-webkit-animation: shadow-drop-2-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: shadow-drop-2-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .button-homepage:hover {
     transition: 1s;
-    width: 48vw;
-    height: 8vh;
-    -webkit-animation: text-blur-out 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-            animation: text-blur-out 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    -webkit-animation: text-blur-out 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+            animation: text-blur-out 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+
 }
 
 

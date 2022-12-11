@@ -13,7 +13,7 @@ export default function Home() {
         ))}
         </div>
       <h3 className="job-title job-title-anime">Développeur Junior Front-End</h3>
-      <NavLink to="/contact"><button className="button-homepage button-homepage-anime">ME CONTACTER</button></NavLink>
+      <NavLink to="/contact"><button className="button-homepage button-homepage-anime1"><span className="button-homepage-anime2">ME CONTACTER</span></button></NavLink>
     
     
     </div>

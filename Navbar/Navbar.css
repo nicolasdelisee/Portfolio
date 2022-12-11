@@ -17,6 +17,24 @@
     overflow: hidden;
     z-index: 9;
   }
+
+  .menuNav .name_navbar {
+    margin-top: 0vh;
+    text-align: left;
+    margin-left: 5vw;
+    margin-bottom: 20vh;
+    border-bottom: none;
+    font-family: var(--secondary-font);
+    font-size: 2rem;
+  }
+
+
+  .maj_name_navbar {
+    font-family: var(--secondary-font);
+    font-size: 3rem;
+    text-shadow: var(--third-color) 1px 0 8px;
+    background-color: var(--burgermenu-color);
+  }
   
   .menuNav.showMenu {
     width: 100vw;
