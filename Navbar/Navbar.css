@@ -75,3 +75,17 @@
     width: 12vw;
     height: 12vw;
 }
+
+@media screen and (min-width: 600px) {
+  .navbar button {
+    display: none;
+  }
+
+  .menuNavDesktop {
+display: flex;
+flex-direction: row;
+align-items: center;
+background-color: var(--burgermenu-color);
+
+  }
+}
