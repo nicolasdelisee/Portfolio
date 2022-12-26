@@ -76,7 +76,7 @@
     height: 12vw;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
   .navbar button {
     display: none;
   }
@@ -85,12 +85,19 @@
 display: flex;
 flex-direction: row;
 align-items: center;
+justify-content: end;
 background-color: var(--burgermenu-color);
-height: 10vh;
+height: 12vh;
 font-size: 1.1rem;
   }
 
-  .menuNavDesktop li:hover {
+  .name_navbar {
+    position:absolute;
+    left: 2vw;
+    top: 1.4vh;
+  }
+
+  .navbar_hover:hover {
     -webkit-animation: text-shadow-drop-center 0.6s both;
             animation: text-shadow-drop-center 0.6s both;
   }
@@ -99,7 +106,7 @@ font-size: 1.1rem;
      text-shadow: 0 0 0 var(--secondary-color);
    }
    100% {
-     text-shadow: 0 0 18px var(--secondary-color);
+     text-shadow: 0 0 25px var(--secondary-color);
    }
   }
   @keyframes text-shadow-drop-center {
@@ -107,7 +114,7 @@ font-size: 1.1rem;
      text-shadow: 0 0 0 var(--secondary-color);
    }
    100% {
-     text-shadow: 0 0 18px var(--secondary-color);
+     text-shadow: 0 0 25px var(--secondary-color);
    }
   }
 }

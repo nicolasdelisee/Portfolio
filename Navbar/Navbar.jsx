@@ -8,7 +8,7 @@ import "./Navbar.css";
 const Navbar = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
     const [width, setWidth] = useState(window.innerWidth);
-    const breakpoint = 600;
+    const breakpoint = 700;
     const handleToggle = () => {
         setNavbarOpen(!navbarOpen);
     }
@@ -27,10 +27,10 @@ const Navbar = () => {
 
                 <ul className={breakpoint < width ? "menuNavDesktop" : (`menuNav ${navbarOpen ? "showMenu" : ""}`)}>
                     <li className="name_navbar"><strong className="maj_name_navbar">N</strong>icolas <strong className="maj_name_navbar">D</strong>elisée</li>
-                    <NavLink to="/home" activeClassName="active-burger" onClick={closeMenu}><li>Accueil</li></NavLink>
-                    <NavLink to="/parcours" activeClassName="active-burger" onClick={closeMenu}><li>Mon parcours</li></NavLink>
-                    <NavLink to="/projets" activeClassName="active-burger" onClick={closeMenu}><li>Mes projets</li></NavLink>
-                    <NavLink to="/contact" activeClassName="active-burger" onClick={closeMenu}><li>Me contacter</li></NavLink>
+                    <NavLink to="/home" className="navbar_hover" activeClassName="active-burger" onClick={closeMenu}><li>Accueil</li></NavLink>
+                    <NavLink to="/parcours" className="navbar_hover" activeClassName="active-burger" onClick={closeMenu}><li>Mon parcours</li></NavLink>
+                    <NavLink to="/projets" className="navbar_hover" activeClassName="active-burger" onClick={closeMenu}><li>Mes projets</li></NavLink>
+                    <NavLink to="/contact" className="navbar_hover" activeClassName="active-burger" onClick={closeMenu}><li>Me contacter</li></NavLink>
                 </ul>
             </nav>
     );

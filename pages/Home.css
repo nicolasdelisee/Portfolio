@@ -35,7 +35,7 @@
     font-family: var(--secondary-font);
     margin-top: 20vh;
     font-size: 5rem;
-    text-shadow: var(--third-color) 1px 0 8px;
+    text-shadow: var(--third-color) 1px 0 5px;
 }
 
 .name-letter-maj-anime {
@@ -68,7 +68,8 @@
 
 .button-homepage {
     margin-top: 10vh;
-    width: 42vw;
+    padding-left: 30px;
+    padding-right: 30px;
     height: 6vh;
     font-size: 1rem;
     border-radius: 10px;
