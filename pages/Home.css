@@ -4,6 +4,13 @@
     align-items: center;
 }
 
+.desktop-image {
+  width: 70vw;
+  height: auto;
+  margin-top: 20vh;
+  border-radius: 20px;;
+}
+
 .title {
     display: flex;
     flex-direction: row;
@@ -13,7 +20,7 @@
 
 .name-letter {
     font-family: var(--secondary-font);
-    margin-top: 20vh;
+    margin-top: 5vh;
     font-size: 3.5rem;
 }
 
@@ -23,6 +30,7 @@
 }
 
 .name-letter:hover {
+    cursor: default;
     text-shadow: var(--third-color) 1px 0 15px;
     transition: 0.2s;
     -webkit-animation: text-blur-out 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
@@ -30,10 +38,11 @@
 }
 
 .name-letter-maj {
+    cursor: default;
     display: flex;
     flex-direction: row;
     font-family: var(--secondary-font);
-    margin-top: 20vh;
+    margin-top: 5vh;
     font-size: 5rem;
     text-shadow: var(--third-color) 1px 0 5px;
 }
@@ -51,6 +60,7 @@
 }
 
 .job-title {
+    cursor: default;
     text-align: center;
     font-size: 1rem;
     font-style: italic;
@@ -197,11 +207,17 @@
   }
   
 
+  @media screen and (min-width: 700px) {
+    .desktop-image {
+      width: 40vw;
+      margin-top: 5vh;
+    }
+}
+
 @media screen and (min-width: 900px) {
     .button-homepage:hover {
         color: var(--primary-color);
         background-color: var(--secondary-color);
-    
     }
 }
   

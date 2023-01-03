@@ -27,7 +27,7 @@ const Navbar = () => {
 
                 <ul className={breakpoint < width ? "menuNavDesktop" : (`menuNav ${navbarOpen ? "showMenu" : ""}`)}>
                     <li className="name_navbar"><strong className="maj_name_navbar">N</strong>icolas <strong className="maj_name_navbar">D</strong>elisée</li>
-                    <NavLink to="/home" className="navbar_hover" activeClassName="active-burger" onClick={closeMenu}><li>Accueil</li></NavLink>
+                    <NavLink to="/" className="navbar_hover" activeClassName="active-burger" onClick={closeMenu}><li>Accueil</li></NavLink>
                     <NavLink to="/parcours" className="navbar_hover" activeClassName="active-burger" onClick={closeMenu}><li>Mon parcours</li></NavLink>
                     <NavLink to="/projets" className="navbar_hover" activeClassName="active-burger" onClick={closeMenu}><li>Mes projets</li></NavLink>
                     <NavLink to="/contact" className="navbar_hover" activeClassName="active-burger" onClick={closeMenu}><li>Me contacter</li></NavLink>
