@@ -79,15 +79,37 @@ Main components
   border-radius: 50%;
   box-shadow: 0 0 0 4px var(--secondary-color),
     inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+    background: var(--primary-color);
 }
-.cd-timeline-img {
-  background: white;
+
+.cd-timeline-img-hover {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px var(--secondary-color),
+    inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+  background: var(--secondary-color);
 }
 
 
 
 @media only screen and (min-width: 1170px) {
   .cd-timeline-img {
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: 15px;
+    /* Force Hardware Acceleration in WebKit */
+    --webkit-transform: translateZ(0);
+    --webkit-backface-visibility: hidden;
+  }
+
+  .cd-timeline-img-hover {
     width: 30px;
     height: 30px;
     left: 50%;

@@ -1,0 +1,113 @@
+.form__contact {
+  // position: absolute;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 7vh;
+  // background-color: var(--burgermenu-color);
+  margin-top: 5vh;
+}
+
+.form__div {
+  width: 80%;
+}
+
+.inputBox__contact {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputBox__contact input {
+  width: 100%;
+  padding: 1vmin;
+  border: 3px solid var(--secondary-color-opa);
+  border-radius: 1em;
+  outline: none;
+  font-size: 2vmin;
+  transition: 0.5s;
+  padding-left: 1em;
+  margin-bottom: 5vmin;
+}
+
+.inputBox__contact span {
+  position: absolute;
+  left: 1em;
+  top: 1.4vmin;
+  pointer-events: none;
+  font-size: 2vmin;
+  transition: 0.5s;
+}
+
+.inputBox__contact ion-icon {
+  font-size: 3.5vmin;
+  position: absolute;
+  top: 0.9vmin;
+  right: 20px;
+}
+
+.inputBox__contact input:valid ~ span,
+.inputBox__contact input:focus ~ span {
+
+  transform: translateX(1em) translateY(-3.6vmin);
+  font-size: 1.7vmin;
+  padding: 0.1em 2em;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 2em;
+  letter-spacing: 0.2em;
+  font-weight: bold;
+}
+
+.inputBox__contact input:valid,
+.inputBox__contact input:focus {
+  border: 0.4vmin solid var(--secondary-color);
+}
+
+.form__title {
+  margin-bottom: 4vmin;
+  margin-top: 3vmin;
+}
+
+.form__title h2::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  text-align: center;
+  height: 3px;
+  background: var(--secondary-color);
+  transform: scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.form__title h2:hover::after {
+  transform: scale(1);
+}
+
+.inputBox__contact:nth-child(3) input {
+  height: 15vmin;
+  padding-bottom: 20vmin;
+}
+
+.buttonContact {
+  display: flex;
+  margin: auto;
+  background: var(--primary);
+  border: none;
+  padding: 0.5em 2em;
+  border-radius: 0.7em;
+  color: var(--fontprimary);
+  font-size: 2.5vmin;
+  margin-top: 2vmin;
+  margin-bottom: 5vmin;
+  cursor: default;
+}
+
+.buttonContact:hover {
+  transform: scale(0.96);
+}
+
+.buttonContact:active {
+  transform: scale(0.92);
+}

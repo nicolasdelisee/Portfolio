@@ -12,7 +12,9 @@
   --burgermenu-color: #202329f8;
   --primary-color: #282c34;
   --secondary-color: #61dafb;
+  --secondary-color-opa: #61dafb50;
   --third-color: #FC0;
+  --fourth-color: #333c42;
   --primary-font: Play;
   --secondary-font: Flower;
 }

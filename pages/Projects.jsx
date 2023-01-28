@@ -5,7 +5,6 @@ import "./projects.scss";
 const Projects = () => {
     return (
         <div id="timeline">
-
             {Project.map((e) => (
                  <div className="tl-item">
                     <div className="tl-bg"><img src={e.url_image} alt={e.name} className={`tl-bg ${e.classname_image}`}/></div>
