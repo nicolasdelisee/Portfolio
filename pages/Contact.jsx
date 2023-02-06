@@ -9,7 +9,17 @@ const Contact = () => {
   const [message, setMessage] = useState(false);
   const [icon, setIcon] = useState("close-circle");
 
-  const emailValidation = (e) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
     const pattern = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{1,2})+$/;
     const emailValue = e.target.value;
     setEmail(emailValue);
@@ -21,6 +31,36 @@ const Contact = () => {
       setIcon("close-circle");
     }
   };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    fetch("/send-email", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Email sent:", data);
+      })
+      .catch((error) => {
+        console.error("Email not sent:", error);
+      });
+      
+  };
+
+  // const emailValidation = (e) => {
+  //   const pattern = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{1,2})+$/;
+  //   const emailValue = e.target.value;
+  //   setEmail(emailValue);
+  //   if (email.match(pattern)) {
+  //     setMessage("icon success-color");
+  //     setIcon("checkmark-circle");
+  //   } else {
+  //     setMessage("icon error-color");
+  //     setIcon("close-circle");
+  //   }
+  // };
   const downloadPDF = () => {
     // using Java Script method to get PDF file
     fetch("Nicolas Delisée - CV.pdf").then((response) => {
@@ -71,16 +111,17 @@ const Contact = () => {
           </a>
           <h2>Contact</h2>
         </div>
-        <form className="form__div">
+        <form className="form__div" onSubmit={handleSubmit}>
           <div className="inputBox__contact">
-            <input type="text" required="required" />
+              
+            <input type="text" required="required" onChange={handleChange}/>
             <span>Nom</span>
           </div>
           <div className="inputBox__contact">
             <input
               type="email"
               required="required"
-              onChange={emailValidation}
+              onChange={handleChange}
               value={email}
             />
             <span>Email</span>

@@ -61,19 +61,18 @@
 
 .navbar button {
     border: none;
-    background-color: var(--burgermenu-color);
 }
 
 .navbarOpen {
-    width: 12vw;
-    height: 12vw;
+    width: 60px;
+    height: 60px;
     position:relative;
     background-color: var(--burgermenu-color);
 }
 
 .navbarClose {
-    width: 12vw;
-    height: 12vw;
+  width: 60px;
+  height: 60px;
 }
 
 @media screen and (min-width: 700px) {
