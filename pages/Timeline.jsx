@@ -3,15 +3,14 @@ import TimelineDates from "../data/TimelineDates";
 import "./Timeline.scss";
 
 const Timeline = () => {
-  const [isHover, setIsHover] = useState(false);
 
   return (
     <div>
       <section id="cd-timeline" className="cd-container">
         {TimelineDates.map((job, id) => (
           <div key={id} className="cd-timeline-block">
-            <div className={`${isHover ? "cd-timeline-img-hover" : "cd-timeline-img"}`}></div>
-            <div className="cd-timeline-content" onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
+            <div className="cd-timeline-img"></div>
+            <div className="cd-timeline-content">
               <h2 className="job-name">{job.title}</h2>
               <div className="timeline-content-info">
                 <span className="timeline-content-info-title">
