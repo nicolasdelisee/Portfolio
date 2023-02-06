@@ -1,6 +1,8 @@
 .form {
   display: flex;
   flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
 }
 
 .form__pdf {
@@ -36,7 +38,6 @@
   padding-bottom: 7vh;
   margin-top: 5vh;
   margin-right: 10vw;
-  /* margin-left: vw; */
 }
 
 .form__div {
