@@ -21,13 +21,20 @@
 }
 
 .pdf__button {
-  margin-top: 4vh;
-  margin-left: 6vw;
+  margin-top: 6vh;
+  padding-left: 30px;
+  padding-right: 30px;
   height: 6vh;
   font-size: 1rem;
   border-radius: 10px;
-  border: none;
-  cursor: pointer; 
+  cursor: pointer;
+  border:none;
+  box-shadow: 0.4vmin 0.4vmin 4vmin 0.4vmin var(--secondary-color);
+}
+
+.pdf__button:active {
+  scale: 1.05;
+  transition: 0.5s
 }
 
 .form__contact {
@@ -35,19 +42,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding-bottom: 7vh;
-  margin-top: 5vh;
   margin-right: 10vw;
 }
 
 .form__div {
-  width: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .inputBox__contact {
   position: relative;
   display: flex;
   align-items: center;
+  width: 80%;
 }
 
 .inputBox__contact input {
@@ -122,30 +134,34 @@
 }
 
 .buttonContact {
-  display: flex;
-  margin: auto;
-  background: var(--primary);
-  border: none;
-  padding: 0.5em 2em;
-  border-radius: 0.7em;
-  color: var(--fontprimary);
-  font-size: 2.5vmin;
-  margin-top: 2vmin;
-  margin-bottom: 5vmin;
-  cursor: default;
-}
-
-.buttonContact:hover {
-  transform: scale(0.96);
+  margin-top: 4vh;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 6vh;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  border:none;
+  box-shadow: 0.4vmin 0.4vmin 4vmin 0.4vmin var(--secondary-color);
 }
 
 .buttonContact:active {
-  transform: scale(0.92);
+  scale: 1.05;
+  transition: 0.5s
 }
+
 
 @media screen and (min-width: 600px) {
   .form {
     flex-direction: row;
     justify-content: space-around;
+  }
+  .buttonContact:hover {
+    transform: scale(0.96);
+    transition: 0.5s;
+  }
+  .pdf__button:hover {
+    transform: scale(0.96);
+    transition: 0.5s;
   }
 }
