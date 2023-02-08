@@ -9,6 +9,19 @@ const Contact = () => {
   const [message, setMessage] = useState(false);
   const [icon, setIcon] = useState("close-circle");
 
+  const emailValidation = (e) => {
+    const pattern = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{1,2})+$/;
+    const emailValue = e.target.value;
+    setEmail(emailValue);
+    if (email.match(pattern)) {
+      setMessage("icon success-color");
+      setIcon("checkmark-circle");
+    } else {
+      setMessage("icon error-color");
+      setIcon("close-circle");
+    }
+  };
+
   const downloadPDF = () => {
     fetch("Nicolas Delisée - CV.pdf").then((response) => {
       response.blob().then((blob) => {
@@ -22,11 +35,11 @@ const Contact = () => {
   };
 
   useEffect(() => {
-    gsap.fromTo(".form__pdf", { x: -800, duration: 3 }, { x: 0, duration: 3 });
+    gsap.fromTo(".form__pdf", { x: -800, duration: 1.5 }, { x: 0, duration: 1.5 });
     gsap.fromTo(
       ".form__contact",
-      { x: 800, duration: 3 },
-      { x: 0, duration: 3 }
+      { x: 800, duration: 1.5 },
+      { x: 0, duration: 1.5 }
     );
   }, []);
 
@@ -40,21 +53,21 @@ const Contact = () => {
       </div>
       <div className="form__contact">
         <div className="form__title">
-          <h2>Mes coordonnées</h2>
-          <h3>07 69 92 73 99</h3>
+          <h2 className="form__title__name">Mes coordonnées</h2>
+          <h4>07 69 92 73 99</h4>
           <a href="mailto:nicolas.delisee3@gmail.com" target="_blank">
-            <h3>nicolas.delisee3@gmail.com</h3>
+            <h4 className="form__title__coord">nicolas.delisee3@gmail.com</h4>
           </a>
           <a href="https://github.com/nicolasdelisee" target="_blank">
-            <h3>GitHub/nicolasdelisee</h3>
+            <h4 className="form__title__coord">GitHub/nicolasdelisee</h4>
           </a>
           <a
             href="https://www.linkedin.com/in/nicolas-delis%C3%A9e-2b290b42/"
             target="_blank"
           >
-            <h3>LinkedIn/nicolasdelisee</h3>
+            <h4 className="form__title__coord">LinkedIn/nicolasdelisee</h4>
           </a>
-          <h2>Contact</h2>
+          <h2 className="form__title__name">Contact</h2>
         </div>
         <form className="form__div">
           <div className="inputBox__contact">
@@ -62,7 +75,7 @@ const Contact = () => {
             <span>Nom</span>
           </div>
           <div className="inputBox__contact">
-            <input type="email" required="required" value={email} />
+            <input type="email" required="required" onChange={emailValidation} value={email} />
             <span>Email</span>
             <div
               className={email.length === 0 ? "icon initial-color" : message}

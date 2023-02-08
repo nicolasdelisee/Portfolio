@@ -37,7 +37,7 @@ export default function Home() {
       </h3>
       <NavLink to="/contact">
         <button className="button-homepage button-homepage-anime1">
-          <span className="button-homepage-anime2">ME CONTACTER</span>
+          <span className="button-homepage-anime2">Me contacter</span>
         </button>
       </NavLink>
 <img className="desktop-image" src={desktop} />

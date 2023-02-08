@@ -81,14 +81,14 @@
 }
 
 .button-homepage {
-  margin-top: 10vh;
+  margin-top: 5vh;
   padding-left: 30px;
   padding-right: 30px;
   height: 6vh;
   font-size: 1rem;
   border-radius: 10px;
   cursor: pointer;
-  border:none;
+  border: none;
   box-shadow: 0.4vmin 0.4vmin 4vmin 0.4vmin var(--secondary-color);
 }
 
@@ -96,7 +96,6 @@
   scale: 0.92;
   transition: 0.5s;
 }
-
 
 @-webkit-keyframes text-focus-in {
   0% {
@@ -174,11 +173,19 @@
     width: 40vw;
     margin-top: 5vh;
   }
-}
-
-@media screen and (min-width: 900px) {
   .button-homepage:hover {
     transform: scale(0.96);
     transition: 0.5s;
   }
+  .title {
+    margin-top: 6vh;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .desktop-image {
+    width: 28vw;
+    margin-top: 9vh;
+  }
+
 }
