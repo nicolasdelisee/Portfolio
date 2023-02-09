@@ -175,6 +175,7 @@
   .form {
     flex-direction: row;
     justify-content: space-around;
+    height: 88vh;
   }
   .form__contact {
     margin-top: 6vh;
