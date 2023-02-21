@@ -43,23 +43,6 @@ const Contact = () => {
     );
   }, []);
 
-
-/*   const handleSubmit = (event) => {
-    event.preventDefault();
-  
-    const myForm = event.target;
-    const formData = new FormData(myForm);
-    
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => console.log("Form successfully submitted"))
-      .catch((error) => alert(error));
-  }; */
-  
-
   return (
     <div className="form">
       <div className="form__pdf">
@@ -86,7 +69,7 @@ const Contact = () => {
           </a>
           <h2 className="form__title__name">Contact</h2>
         </div>
-        <form className="form__div" action="contact/submit" name="contact" method="POST" data-netlify="true" onSubmit="submit">
+        <form className="form__div" action="contact/" name="contact" method="POST" data-netlify="true" onSubmit="submit">
         <input type="hidden" name="form-name" value="contact" />
 
           <div className="inputBox__contact">
