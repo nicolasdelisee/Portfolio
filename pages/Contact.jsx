@@ -84,7 +84,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="inputBox__contact">
-            <textarea type="message" name="message" required="required" />
+            <textarea type="message" name="message" required="required"></textarea>
             <span>Message</span>
           </div>
           <button className="buttonContact" type="submit">Envoyer</button>
