@@ -60,6 +60,7 @@
 }
 
 .navbar button {
+    background-color: transparent;
     border: none;
 }
 
@@ -67,12 +68,16 @@
     width: 60px;
     height: 60px;
     position:relative;
-    background-color: var(--burgermenu-color);
+    background-color: transparent;
+
 }
 
 .navbarClose {
+  position: absolute;
   width: 60px;
   height: 60px;
+  background-color: transparent;
+  right: 8px;
 }
 
 @media screen and (min-width: 700px) {
@@ -86,7 +91,7 @@ flex-direction: row;
 align-items: center;
 justify-content: end;
 background-color: var(--burgermenu-color);
-height: 12vh;
+height: 10vh;
 font-size: 1.1rem;
   }
 
