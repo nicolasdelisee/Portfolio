@@ -43,6 +43,20 @@ const Contact = () => {
     );
   }, []);
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": event.target.getAttribute("name"),
+        ...name,
+      }),
+    })
+      .then(() => navigate("/thank-you/"))
+      .catch((error) => alert(error));
+  };
+
   return (
     <div className="form">
       <div className="form__pdf">
@@ -69,13 +83,13 @@ const Contact = () => {
           </a>
           <h2 className="form__title__name">Contact</h2>
         </div>
-        <form className="form__div" name="contact" method="POST" netlify>
+        <form className="form__div" name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
           <div className="inputBox__contact">
-            <input type="text" name="name" />
+            <input type="text" name="name" required="required" />
             <span>Nom</span>
           </div>
           <div className="inputBox__contact">
-            <input type="email" name="email" onChange={emailValidation} value={email} />
+            <input type="email" name="email" required="required" onChange={emailValidation} value={email} />
             <span>Email</span>
             <div
               className={email.length === 0 ? "icon initial-color" : message}
@@ -84,7 +98,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="inputBox__contact">
-            <textarea type="message" name="message"></textarea>
+            <textarea type="message" name="message" required="required"></textarea>
             <span>Message</span>
           </div>
           <button className="buttonContact" type="submit">Envoyer</button>
