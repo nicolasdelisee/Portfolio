@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import {Navigate } from "react-router-dom";
 import "./contact.css";
 import cv from "../src/assets/pictures/cv.jpg";
 import { gsap } from "gsap";
@@ -52,19 +52,21 @@ const Contact = () => {
       )
       .join("&");
   }
-
+  
   const handleSubmit = (event) => {
     event.preventDefault();
     fetch("/", {
       method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": event.target.getAttribute("name"),
         ...name,
       }),
     })
-      .then(() => navigate("/thank-you/"))
+/*       .then(() => navigate("/thank-you/")) */
       .catch((error) => alert(error));
   };
+  
 
   return (
     <div className="form">
