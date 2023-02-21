@@ -44,28 +44,25 @@ const Contact = () => {
   }, []);
 
 
-  function encode(data) {
-    return Object.keys(data)
-      .map(
-        (key) =>
-          encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  }
-  
   const handleSubmit = (event) => {
     event.preventDefault();
+  
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+    
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": event.target.getAttribute("name"),
-        ...name,
-      }),
+      body: new URLSearchParams(formData).toString(),
     })
-/*       .then(() => navigate("/thank-you/")) */
+      .then(() => console.log("Form successfully submitted"))
       .catch((error) => alert(error));
   };
+  
+  document
+    .querySelector("form")
+    .addEventListener("submit", handleSubmit);
+  
   
 
   return (
@@ -95,7 +92,6 @@ const Contact = () => {
           <h2 className="form__title__name">Contact</h2>
         </div>
         <form className="form__div" name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
-        <input type="hidden" name="form-name" value="contact" />
           <div className="inputBox__contact">
             <input type="text" name="name" required="required" />
             <span>Nom</span>
