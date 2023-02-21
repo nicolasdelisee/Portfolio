@@ -44,7 +44,7 @@ const Contact = () => {
   }, []);
 
 
-  const handleSubmit = (event) => {
+/*   const handleSubmit = (event) => {
     event.preventDefault();
   
     const myForm = event.target;
@@ -57,7 +57,7 @@ const Contact = () => {
     })
       .then(() => console.log("Form successfully submitted"))
       .catch((error) => alert(error));
-  };
+  }; */
   
 
   return (
@@ -86,7 +86,7 @@ const Contact = () => {
           </a>
           <h2 className="form__title__name">Contact</h2>
         </div>
-        <form className="form__div" name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+        <form className="form__div" name="contact" method="POST" data-netlify="true">
           <div className="inputBox__contact">
             <input type="text" name="name" required="required" />
             <span>Nom</span>
