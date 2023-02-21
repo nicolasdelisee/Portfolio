@@ -59,11 +59,6 @@ const Contact = () => {
       .catch((error) => alert(error));
   };
   
-  document
-    .querySelector("form")
-    .addEventListener("submit", handleSubmit);
-  
-  
 
   return (
     <div className="form">
