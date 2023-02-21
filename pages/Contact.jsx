@@ -43,12 +43,22 @@ const Contact = () => {
     );
   }, []);
 
+
+  function encode(data) {
+    return Object.keys(data)
+      .map(
+        (key) =>
+          encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault();
     fetch("/", {
       method: "POST",
       body: encode({
-        "contact": event.target.getAttribute("name"),
+        "form-name": event.target.getAttribute("name"),
         ...name,
       }),
     })
