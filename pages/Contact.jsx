@@ -75,7 +75,7 @@ const Contact = () => {
             <span>Nom</span>
           </div>
           <div className="inputBox__contact">
-            <input type="email" name="email" required="required" onChange={emailValidation} value="babab"/>
+            <input type="email" name="email" required="required" onChange={emailValidation} value={email} />
             <span>Email</span>
             <div
               className={email.length === 0 ? "icon initial-color" : message}
