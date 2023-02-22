@@ -9,6 +9,8 @@
   height: auto;
   margin-top: 20vh;
   border-radius: 20px;
+  box-shadow: 0.2vmin 0.2vmin 2vmin 0.2vmin var(--secondary-color);
+
 }
 
 .title {
@@ -84,12 +86,17 @@
   margin-top: 5vh;
   padding-left: 30px;
   padding-right: 30px;
-  height: 6vh;
+  height: 50px;
   font-size: 1rem;
   border-radius: 10px;
   cursor: pointer;
   border: none;
   box-shadow: 0.4vmin 0.4vmin 4vmin 0.4vmin var(--secondary-color);
+}
+
+.button-homepage-anime {
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 .button-homepage:active {
