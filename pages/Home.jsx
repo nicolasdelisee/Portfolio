@@ -33,11 +33,17 @@ export default function Home() {
         )}
       </div>
       <h3 className="job-title job-title-anime">
-        Développeur Junior Front-End
+        Développeur web Full-Stack
       </h3>
+      <h4>
+        Recherche de contrat de professionnalisation
+      </h4>
+      <h4>
+        3 semaines en entreprise / 1 semaine à l'école
+      </h4>
       <NavLink to="/contact">
         <button className="button-homepage button-homepage-anime1">
-          <span className="button-homepage-anime2">Me contacter</span>
+          <span>Me contacter</span>
         </button>
       </NavLink>
 <img className="desktop-image" src={desktop} />
