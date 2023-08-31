@@ -13,8 +13,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-
-  width: 25%;
+  cursor: default;
+  width: 20%;
   min-height: 90vh;
   color: #fff;
   overflow: hidden;
@@ -22,8 +22,12 @@
   & h3,
   h4 {
     white-space: nowrap;
-
     background-color: transparent;
+  }
+  & a {
+    white-space: nowrap;
+    background-color: transparent;
+    font-size: 1.5rem;
   }
 
   &:before,
@@ -56,7 +60,7 @@
   }
 
   &:hover {
-    width: 30% !important;
+    width: 50% !important;
 
     &:after {
       opacity: 0;

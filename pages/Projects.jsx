@@ -21,7 +21,7 @@ const Projects = () => {
           <div className="tl-content">
             <h5>Durée : {e.duration}</h5>
             <p>{e.description}</p>
-            
+            {e.has_website && <a href={e.link}> Visiter le site </a>}
           </div>
         </div>
       ))}
