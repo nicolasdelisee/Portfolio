@@ -41,10 +41,10 @@ export default function Home() {
       <h3 className="job-title job-title-anime">
         Développeur web Full-Stack
       </h3>
-      <h4>
+      <h4 className="search-title search-title-anime">
         Recherche de contrat de professionnalisation
       </h4>
-      <h4>
+      <h4 className="search-title search-title-anime">
         3 semaines en entreprise / 1 semaine à l'école
       </h4>
       <NavLink to="/contact">
