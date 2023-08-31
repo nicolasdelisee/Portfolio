@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import "./contact.css";
 import cv from "../src/assets/pictures/cv.jpg";
 import { gsap } from "gsap";
@@ -69,13 +68,15 @@ const Contact = () => {
           </a>
           <h2 className="form__title__name">Contact</h2>
         </div>
-        <form className="form__div">
+        <form className="form__div" action="/" name="contact" method="POST" data-netlify="true" onSubmit="submit">
+        <input type="hidden" name="form-name" value="contact" />
+
           <div className="inputBox__contact">
-            <input type="text" required="required" />
+            <input type="text" name="name" required="required" />
             <span>Nom</span>
           </div>
           <div className="inputBox__contact">
-            <input type="email" required="required" onChange={emailValidation} value={email} />
+            <input type="email" name="email" required="required" onChange={emailValidation} value={email} />
             <span>Email</span>
             <div
               className={email.length === 0 ? "icon initial-color" : message}
@@ -84,10 +85,10 @@ const Contact = () => {
             </div>
           </div>
           <div className="inputBox__contact">
-            <textarea type="message" required="required" />
+            <textarea type="message" name="message" required="required"></textarea>
             <span>Message</span>
           </div>
-          <input className="buttonContact" type="submit" />
+          <button className="buttonContact" type="submit">Envoyer</button>
         </form>
       </div>
     </div>

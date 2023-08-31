@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.css";
 import { NavLink } from "react-router-dom";
 import desktop from "../src/assets/pictures/desktop2.jpg";
+import { gsap } from "gsap";
+
 
 export default function Home() {
+  useEffect(() => {
+    gsap.fromTo(".desktop-image", { y: 800, duration: 1 }, { y: 0, duration: 1 });
+  }, []);
+
   const letterName = [
     "N",
     "i",
@@ -42,8 +48,8 @@ export default function Home() {
         3 semaines en entreprise / 1 semaine à l'école
       </h4>
       <NavLink to="/contact">
-        <button className="button-homepage button-homepage-anime1">
-          <span>Me contacter</span>
+        <button className="button-homepage button-homepage-anime">
+          <span className="button-homepage-anime">Me contacter</span>
         </button>
       </NavLink>
 <img className="desktop-image" src={desktop} />
