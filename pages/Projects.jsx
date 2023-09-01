@@ -1,6 +1,7 @@
 import React from "react";
 import Project from "../data/Project";
 import "./projects.scss";
+import { NavLink } from "react-router-dom";
 
 const Projects = () => {
   return (
@@ -21,7 +22,14 @@ const Projects = () => {
           <div className="tl-content">
             <h5>Durée : {e.duration}</h5>
             <p>{e.description}</p>
-            {e.has_website && <a href={e.link}> Visiter le site </a>}
+            {e.has_website && (
+              <a href={e.link}>
+                {" "}
+                <button className="button-homepage button-homepage-anime">
+                  <span className="button-homepage-anime">Visiter le site</span>
+                </button>
+              </a>
+            )}
           </div>
         </div>
       ))}
