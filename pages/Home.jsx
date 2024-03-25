@@ -39,14 +39,14 @@ export default function Home() {
         )}
       </div>
       <h3 className="job-title job-title-anime">
-        Développeur web Full-Stack
+        Testeur QA
       </h3>
       <h4 className="search-title search-title-anime">
-        Recherche de contrat de professionnalisation
+        Actuellement en alternance chez Sellsy
       </h4>
-      <h4 className="search-title search-title-anime">
+      {/* <h4 className="search-title search-title-anime">
         3 semaines en entreprise / 1 semaine à l'école
-      </h4>
+      </h4> */}
       <NavLink to="/contact">
         <button className="button-homepage button-homepage-anime">
           <span className="button-homepage-anime">Me contacter</span>

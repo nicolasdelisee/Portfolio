@@ -4,6 +4,16 @@ import iut from "../src/assets/pictures/iut.jpg"
 const TimelineDates = [
     {
         id: 1,
+        date: "Depuis Novembre 2023",
+        place: "Sellsy, Bordeaux",
+        title: "QA Engineer (en alternance)",
+        description: "J'ai finalement pu entrer dans le monde professionnel, dans le monde de l'informatique, avec ce poste de QA Engineer au sein de Sellsy, qui me permet encore actuelement de me familiariser avec de nouveaux outils, tout en participant activement à l'évolution du CRM que Sellsy développe. Je reçois en parallèle des cours afin de passer en fin d'année un Diplôme de Concepteur / Développeur d'Applications (Bac +3). ",
+        softwares: ["Jira", "Cypress", "Postman", "Allure", "GitLab", "React", "TypeScript"],
+        url_image: wcs,
+        
+    },
+    {
+        id: 2,
         date: "Septembre 2022 - Février 2023",
         place: "Wild Code School, Bordeaux",
         title: "Développeur Web",
@@ -13,7 +23,7 @@ const TimelineDates = [
         
     },
     {
-        id: 2,
+        id: 3,
         date: "Mars 2018 - Août 2022",
         place: "Engie Solutions, Bordeaux",
         title: "Dessinateur-projeteur",
@@ -22,7 +32,7 @@ const TimelineDates = [
         url_image: iut,
     },
     {
-        id: 3,
+        id: 4,
         date: "Février 2012 - Septembre 2017",
         place: "Stantec, Montréal (Canada)",
         title: "Technicien Dessinateur",
@@ -31,7 +41,7 @@ const TimelineDates = [
         url_image: iut,
     },
     {
-        id: 4,
+        id: 5,
         date: "Juin 2011 - Octobre 2011",
         place: "SNCF, Bordeaux",
         title: "Technicien d'études Travaux Publics",
@@ -40,7 +50,7 @@ const TimelineDates = [
         url_image: iut,
     },
     {
-        id: 5,
+        id: 6,
         date: "Mars 2009 - Juin 2009",
         place: "EGEE Conseil, Bordeaux",
         title: "Dessinateur en Génie Climatique",
